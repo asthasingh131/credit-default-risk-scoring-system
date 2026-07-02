@@ -57,9 +57,9 @@ Link: https://www.kaggle.com/c/GiveMeSomeCredit
 4. Run all cells top to bottom
 
 ## Project Structure
-├── CFR.ipynb — main notebook (cleaning, EDA, features, models)
-├── SQlite.ipynb — SQL exploration notebook
-├── model_results.csv — predictions and scores
-├── Business Case Statement.docx — business case and problem statement
-├── Charts — all visualization PNGs
-└── README.md — this file
+- CFR.ipynb — main notebook (cleaning, EDA, features, models)
+- SQlite.ipynb — SQL exploration notebook
+- model_results.csv — predictions and scores
+- Business Case Statement.docx — business case and problem statement
+- Charts — all visualization PNGs
+- README.md — this file
