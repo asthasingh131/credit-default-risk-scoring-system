@@ -65,10 +65,8 @@ Link: https://www.kaggle.com/c/GiveMeSomeCredit
 - Business Case Statement.docx — business case and problem statement
 - 07_shap_summary.png — SHAP explainability chart
 
-## AXP CFR Alignment
+## Industry Alignment — Credit Risk
 - "Economic logic to enable profitable decisions" → cost matrix threshold optimizer saving $212,825
-- "Analyze large amounts of data to derive business insights" → SQL EDA on 150,000 customer records
+- "Analyze large amounts of data to derive business insights" → SQL EDA on 150,000 customer records  
 - "Development and validation of predictive models" → 3 models built, compared and cross-validated
 - "Derive business insights and create innovative solutions" → SHAP explainability + feature importance
-- Charts — all visualization PNGs
-- README.md — this file
