@@ -30,7 +30,7 @@ The goal was simple: can we do better than flat rules, and can we prove it in do
 |---|---|
 | Best Model | XGBoost |
 | AUC Score | 0.868 |
-| Cross Validation AUC | (your CV mean score here) |
+| Cross Validation AUC | 0.865 ± 0.004 (5-fold) |
 | Default Threshold Cost | $404,615 |
 | Optimal Threshold Cost | $191,790 |
 | Simulated Cost Saving | $212,825 (52% reduction) |
