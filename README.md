@@ -24,13 +24,14 @@ The goal was simple: can we do better than flat rules, and can we prove it in do
 - Validated model stability using 5-fold stratified cross validation
 - Implemented SHAP explainability to explain individual customer risk predictions
 - Quantified the business impact in dollar terms
-
+- Deployed the final XGBoost model as an interactive Streamlit application
+- 
 ## Results
 | Metric | Value |
 |---|---|
 | Best Model | XGBoost |
 | AUC Score | 0.868 |
-| Cross Validation AUC | 0.865 ± 0.004 (5-fold) |
+| Cross Validation AUC | (your CV mean score here) |
 | Default Threshold Cost | $404,615 |
 | Optimal Threshold Cost | $191,790 |
 | Simulated Cost Saving | $212,825 (52% reduction) |
@@ -42,9 +43,24 @@ Shifting the decision threshold from the standard 0.5 to 0.06 reduced total busi
 cost by 52%. This works because a missed defaulter costs 16x more than a wrongly 
 rejected good customer — so the model should flag even small risks.
 
+ ## Deployment
+The final XGBoost model is deployed using Streamlit and provides:
+
+- Default probability for each applicant
+- Cost-based approval/rejection decision
+- Estimated loss for approved high-risk applicants
+- Interactive applicant inputs
+
+**Live Demo:** [https://credit-default-risk-scoring-system-faiuy2catxu4ctqehgrvrh.streamlit.app/]
+
+The deployed model uses XGBoost's native JSON model format for reliable model loading 
+in the Streamlit environment.
+
 ## Tools Used
+
 - Python — Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, XGBoost, SHAP
 - SQL — SQLite via Jupyter Notebook
+- Streamlit — Model deployment and interactive risk scoring
 - Jupyter Notebook
 
 ## Dataset
@@ -55,15 +71,18 @@ Link: https://www.kaggle.com/c/GiveMeSomeCredit
 ## How to Run
 1. Download dataset from Kaggle link above
 2. Place cs-training.csv in the project folder
-3. Open Credit_Default_Risk_Scoring_System.ipynb  in Jupyter Notebook
+3. Open Credit_Default_Risk_Scoring_System.ipynb in Jupyter Notebook
 4. Run all cells top to bottom
 
 ## Project Structure
 - Credit_Default_Risk_Scoring_System.ipynb — main notebook (cleaning, EDA, features, models, SHAP)
 - SQlite.ipynb — SQL exploration notebook
 - model_results.csv — predictions and scores
-- Business Case Statement.docx — business case and problem statement
-- 07_shap_summary.png — SHAP explainability chart
+- app.py — Streamlit application for credit risk scoring
+- credit_risk_model.json — trained XGBoost model used for deployment
+- requirements.txt — Python dependencies
+-  .python-version — Python version configuration
+- Chart-7 Shap_Summary.png — SHAP explainability chart
 
 ## Industry Alignment — Credit Risk
 - "Economic logic to enable profitable decisions" → cost matrix threshold optimizer saving $212,825
